@@ -4,6 +4,10 @@ A modern and responsive scheduling tool built with React, TypeScript, Tailwind C
 
 ---
 
+## Live Demo
+
+**🔗 [Watch Live Demo](https://post-scheduler-ui.vercel.app/)**
+
 ## Features
 
 - Schedule posts with custom date and time
