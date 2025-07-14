@@ -12,6 +12,7 @@
   "dependencies": {
     "date-fns": "^4.1.0",
     "firebase": "^11.10.0",
+    "framer-motion": "^12.23.5",
     "react": "^19.1.0",
     "react-datepicker": "^8.4.0",
     "react-dom": "^19.1.0",

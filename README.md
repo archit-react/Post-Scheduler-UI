@@ -1,6 +1,6 @@
 # Post Scheduler UI
 
-A modern and responsive scheduling tool built with React, TypeScript, Tailwind CSS, and Vite. Users can schedule posts, receive audio reminders 1 minute before the scheduled time, and manage content using a minimal glassmorphic interface.
+A modern and responsive scheduling tool built with React, TypeScript, Tailwind CSS, and Vite. Users can schedule posts, receive audio reminders 1 minute before the scheduled time, and manage content using a minimal glassmorphic interface. 
 
 ---
 
@@ -17,6 +17,7 @@ A modern and responsive scheduling tool built with React, TypeScript, Tailwind C
 - Clear all scheduled posts
 - Responsive, dark-themed UI using Tailwind CSS
 - Local timezone-aware rendering
+- Prevents duplicate notifications using a Set (`shownToastIds`) ← (NEW FEATURE)
 
 ---
 
@@ -39,7 +40,9 @@ A modern and responsive scheduling tool built with React, TypeScript, Tailwind C
   - Displays a toast notification
   - Plays the reminder audio file (reminder.mp3)
 - Audio playback only occurs if the tab is visible
-- Ensures reminders do not repeat using a notified flag
+- Ensures reminders do not repeat using:
+  - `notified` flag
+  - ✅ `shownToastIds` set (prevents duplicate reminders even if state lags)
 
 ---
 
@@ -90,11 +93,12 @@ Ensure `reminder.mp3` exists in the `/public` directory.
 ## Fixes and Improvements
 
 - Fixed an issue where the alarm would not replay for new sessions
-- Introduced logic to reset notified status on:
+- Introduced logic to reset `notified` status on:
   - Initial load from localStorage
   - Post creation
   - Post edit
-- Cleaned up test code and debug elements for production
+- ✅ Added `shownToastIds` Set to globally track shown reminders
+- ✅ Eliminated duplicate toasts appearing simultaneously for same post
 
 ---
 
