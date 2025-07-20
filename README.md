@@ -6,7 +6,7 @@ A modern and responsive scheduling tool built with React, TypeScript, Tailwind C
 
 ## Live Demo
 
-**🔗 [Watch Live Demo](https://post-scheduler-ui.vercel.app/)**
+** [Watch Live Demo](https://post-scheduler-ui.vercel.app/)**
 
 ## Features
 
@@ -42,7 +42,7 @@ A modern and responsive scheduling tool built with React, TypeScript, Tailwind C
 - Audio playback only occurs if the tab is visible
 - Ensures reminders do not repeat using:
   - `notified` flag
-  - ✅ `shownToastIds` set (prevents duplicate reminders even if state lags)
+  - `shownToastIds` set (prevents duplicate reminders even if state lags)
 
 ---
 
@@ -97,8 +97,8 @@ Ensure `reminder.mp3` exists in the `/public` directory.
   - Initial load from localStorage
   - Post creation
   - Post edit
-- ✅ Added `shownToastIds` Set to globally track shown reminders
-- ✅ Eliminated duplicate toasts appearing simultaneously for same post
+- Added `shownToastIds` Set to globally track shown reminders
+- Eliminated duplicate toasts appearing simultaneously for same post
 
 ---
 
